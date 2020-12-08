@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		38A0798E257F214F00130C31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A0798C257F214F00130C31 /* Main.storyboard */; };
 		38A07990257F215800130C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A0798F257F215800130C31 /* Assets.xcassets */; };
 		38A07993257F215800130C31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A07991257F215800130C31 /* LaunchScreen.storyboard */; };
+		38A079BF258012ED00130C31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38A079BE258012ED00130C31 /* GoogleService-Info.plist */; };
 		D8FAD6231BC109927922577D /* Pods_ChallengeAccepted.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABC2503D21A285DF16434A5 /* Pods_ChallengeAccepted.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		38A0798F257F215800130C31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38A07992257F215800130C31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38A07994257F215800130C31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38A079BE258012ED00130C31 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4775C6FCA4A37FCC8A68E4A2 /* Pods-ChallengeAccepted.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeAccepted.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeAccepted/Pods-ChallengeAccepted.debug.xcconfig"; sourceTree = "<group>"; };
 		EABC2503D21A285DF16434A5 /* Pods_ChallengeAccepted.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeAccepted.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -70,6 +72,7 @@
 				38A0798F257F215800130C31 /* Assets.xcassets */,
 				38A07991257F215800130C31 /* LaunchScreen.storyboard */,
 				38A07994257F215800130C31 /* Info.plist */,
+				38A079BE258012ED00130C31 /* GoogleService-Info.plist */,
 			);
 			path = ChallengeAccepted;
 			sourceTree = "<group>";
@@ -88,7 +91,6 @@
 				4775C6FCA4A37FCC8A68E4A2 /* Pods-ChallengeAccepted.debug.xcconfig */,
 				35C0941481EAA8847426AC4B /* Pods-ChallengeAccepted.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -153,6 +155,7 @@
 			files = (
 				38A07993257F215800130C31 /* LaunchScreen.storyboard in Resources */,
 				38A07990257F215800130C31 /* Assets.xcassets in Resources */,
+				38A079BF258012ED00130C31 /* GoogleService-Info.plist in Resources */,
 				38A0798E257F214F00130C31 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

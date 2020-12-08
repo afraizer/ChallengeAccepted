@@ -13,10 +13,13 @@ class ViewController: UIViewController {
     var score = 0
     var password = "Password"
     var email = "123@gmail.com"
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        FirebaseApp.configure()
+        if FirebaseApp.app() == nil {
+            FirebaseApp.configure()
+        }
         // Do any additional setup after loading the view.
         let db = Firestore.firestore()
         db.collection("users").getDocuments() { (querySnapshot, err) in
