@@ -14,28 +14,35 @@ class ViewController: UIViewController {
     var password = "Password"
     var email = "123@gmail.com"
     
-    /*
-    // put this in an ib action
-    var ref: DocumentReference? = nil
-    ref = db.collection("users").addDocument(data: [
-        "first": "Ada",
-        "last": "Lovelace",
-        "born": 1815
-    ]) { err in
-        if let err = err {
-            print("Error adding document: \(err)")
-        } else {
-            print("Document added with ID: \(ref!.documentID)")
-        }
-    }
-    */
-
     override func viewDidLoad() {
         super.viewDidLoad()
         FirebaseApp.configure()
         // Do any additional setup after loading the view.
+        let db = Firestore.firestore()
+        db.collection("users").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+        }
     }
-
-
+    
+    @IBAction func RegisterButton(_ sender: UIButton) {
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            if let authResult = authResult {
+                print("auth result \(authResult)")
+            }
+            if let error = error {
+                print("error \(error)")
+            }
+        }
+    }
+    
+    @IBAction func LoginButton(_ sender: UIButton) {
+        print("login button pressed")
+    }
 }
 
