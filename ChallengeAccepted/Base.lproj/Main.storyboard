@@ -82,6 +82,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="el8-mw-Y0R" secondAttribute="trailing" constant="16" id="h9Y-3o-vHv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="ryL-NB-TbB" id="ea0-Cc-Z98"/>
+                        <outlet property="passwordField" destination="xWV-62-byS" id="h3q-hR-9e4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
