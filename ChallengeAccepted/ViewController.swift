@@ -61,3 +61,19 @@ class ViewController: UIViewController {
     }
 }
 
+class SecondViewController: UIViewController {
+    @IBOutlet override var tableView: UITableView!
+    
+    override func viewDidLoad() {
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+}
+
+extension ViewController: UITableViewDelegate {
+    
+}
+
+extension ViewController: UITableViewDataSource {
+    
+}
