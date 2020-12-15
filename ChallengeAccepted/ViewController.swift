@@ -61,6 +61,7 @@ class ViewController: UIViewController {
     }
 }
 
+/*
 class SecondViewController: UIViewController {
     @IBOutlet override var tableView: UITableView!
     
@@ -77,3 +78,4 @@ extension ViewController: UITableViewDelegate {
 extension ViewController: UITableViewDataSource {
     
 }
+ */

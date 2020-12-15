@@ -50,6 +50,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 return
             }
         }
+    
+    func handlePasswordlessSignIn(withURL url: URL) -> Bool {
+        let link = url.absoluteString
+        // [START is_signin_link]
+        if Auth.auth().isSignIn(withEmailLink: link) {
+          // [END is_signin_link]
+          UserDefaults.standard.set(link, forKey: "Link")
+          (window?.rootViewController as? UINavigationController)?.popToRootViewController(animated: false)
+          window?.rootViewController?.children[0].performSegue(withIdentifier: "passwordless", sender: nil)
+          return true
+        }
+        return false
+      }
 
 
 /*
