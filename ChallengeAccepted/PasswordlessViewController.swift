@@ -47,6 +47,7 @@ class PasswordlessViewController: UIViewController {
         actionCodeSettings.handleCodeInApp = true
         actionCodeSettings.setIOSBundleID(Bundle.main.bundleIdentifier!)
         let passwordText = unwrapVars(inputString: passwordField.text)
+        /*
         Auth.auth().sendSignInLink(toEmail:email, actionCodeSettings: actionCodeSettings) { error in
             if let error = error {
                 self.showMessagePrompt.text = "\(error.localizedDescription)"
@@ -66,6 +67,7 @@ class PasswordlessViewController: UIViewController {
                 self.navigationController!.popViewController(animated: true)
             }
         }
+ */
         Auth.auth().createUser(withEmail: emailText, password: passwordText) { authResult, error in
             if let authResult = authResult {
                 print("auth result \(authResult)")
@@ -75,7 +77,7 @@ class PasswordlessViewController: UIViewController {
             }
         }
     }
-    
+    /*
     // passes the place through the UIStoryboardSegue
     // takes in sender of type any and a segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -88,12 +90,13 @@ class PasswordlessViewController: UIViewController {
             }
         }
     }
-    
+    */
     func unwrapVars(inputString: String?) -> String {
         if let input = inputString {
             return input
         }
         return "password"
     }
+ 
 }
 
